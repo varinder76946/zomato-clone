@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Promise
+    when we promise of doing a thing (like homework on time) there are two possibilities which can happen . first is I will do the homework 
+    which is promise complete, second is promise reject I will not do home work.
+
+    so in coding promise is the promise that this below code will run for sure. wheather it's a succes or failure. but code will run.
+    promise give a surity that code will run. wheather it's success or failure. but code will run ...
+
+    if i made a fucntion that fetch movies using promises so two things will happen it fetch the movies or not able to fetch. 
+    but function tried to react there..... this is promise.
+    -->
+
+    <!-- // Promise: Best video on promises
+// -resolve
+// -reject
+// -pending -->
+
+<script>
+                        // this is the callback function...
+function func1() {
+    return new Promise(function (resolve, reject) { // here function promise to run the set of code that there are two possiblities
+        // after running the code. one is resolve and reject. but function promise to resolve. if not then it will reject.
+        setTimeout(() => {
+            const error = true;
+            if (!error) {
+                console.log('Function: Your promise has been resolved')
+                resolve();
+            }
+            else {
+                console.log('Function: Your promise has not been resolved')
+                reject('Sorry not fulfilled');
+            }
+        }, 2000);
+    })
+}
+
+func1().then(function(){ //here then is used if fucntion is resolved .. if function is resolved it will perform below statement.
+    console.log("Harry: Thanks for resolving")
+}).catch(function(error){ // here if function doesn't resolve it will be catch here and throw the error ..  
+    console.log("Harry: Very bad bro. Reason: " + error)
+})
+
+// why we use promises = promise give us all the predictions that code will be run task will be resolve and if it resolved then 
+// we will use .then method to perform a task if it got resolved,   
+// but if it doesn't resolve then it will throw a error . we use .catch to catch the failure. 
+
+// so if we dont use promises if our code is a failure. it will not gonna throw the error.and user will be blank like what happened
+// but using promises we can reach both possiblities . if function resolve we will use .then method to perform a tast.if it doesnt
+// we gonna catch the error and do a task on failure or give it to the user now user have something answer that why it doesnt resolve 
+
+</script>
+
+</body>
+</html>
